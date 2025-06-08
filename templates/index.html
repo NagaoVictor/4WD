@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle do Carrinho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            margin: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 300px;
+            border: none;
+            border-radius: 10px;
+            background-color: #00aaff;
+            color: white;
+        }
+        button:active {
+            background-color: #0080cc;
+        }
+        .camera {
+            margin-top: 20px;
+        }
+        .camera img {
+            width: 100%;
+            max-width: 480px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Controle do Carrinho</h1>
+    <button onclick="location.href='/frente'">⬆ Frente</button><br>
+    <button onclick="location.href='/esquerda'">⬅ Esquerda</button>
+    <button onclick="location.href='/direita'">➡ Direita</button><br>
+    <button onclick="location.href='/tras'">⬇ Trás</button><br>
+    <button onclick="location.href='/parar'">⏹ Parar</button>
+
+    <div class="camera">
+        <h2>📷 Câmera ao vivo</h2>
+        <img src="{{ camera_url }}" alt="Câmera ao vivo">
+    </div>
+</body>
+</html>
